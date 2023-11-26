@@ -15,22 +15,22 @@ class AlbumRepository:
             albums.append(item)
         return albums
 
-    # # Find a single album by their id
-    # def find(self, album_id):
-    #     rows = self._connection.execute(
-    #         'SELECT * from albums WHERE id = %s', [album_id])
-    #     row = rows[0]
-    #     return Album(row["id"], row["name"], row["genre"])
+    # Find a single album by their id
+    def find(self, album_id):
+        rows = self._connection.execute(
+            'SELECT * from albums WHERE id = %s', [album_id])
+        row = rows[0]
+        return Album(row["id"], row["title"], row["release_year"], row["artist_id"])
 
-    # # Create a new album
-    # # Do you want to get its id back? Look into RETURNING id;
-    # def create(self, album):
-    #     self._connection.execute('INSERT INTO albums (name, genre) VALUES (%s, %s)', [
-    #                              album.name, album.genre])
-    #     return None
+    # Create a new album
+    # Do you want to get its id back? Look into RETURNING id;
+    def create(self, album):
+        self._connection.execute('INSERT INTO albums (title, release_year, artist_id) VALUES (%s, %s, %s)', [
+                                 album.title, album.release_year, album.artist_id])
+        return None
 
-    # # Delete an album by their id
-    # def delete(self, album_id):
-    #     self._connection.execute(
-    #         'DELETE FROM albums WHERE id = %s', [album_id])
-    #     return None
+    # Delete an album by their id
+    def delete(self, album_id):
+        self._connection.execute(
+            'DELETE FROM albums WHERE id = %s', [album_id])
+        return None

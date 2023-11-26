@@ -35,8 +35,10 @@ class DatabaseConnection:
     def seed(self, sql_filename):
         self._check_connection()
 
-        # Moved seeds folder to directory above, this line is here so it can be found
-        file_path = os.path.join(os.path.dirname(__file__), '..', '..', sql_filename)
+        file_path = sql_filename
+        # If seeds folder moved to directory above, uncomment this line so it can be found
+        # file_path = os.path.join(os.path.dirname(__file__), '..', '..', sql_filename)
+        
 
         if not os.path.exists(file_path):
             raise Exception(f"File {file_path} does not exist")
