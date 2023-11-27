@@ -34,3 +34,9 @@ class AlbumRepository:
         self._connection.execute(
             'DELETE FROM albums WHERE id = %s', [album_id])
         return None
+
+    # Update an existing album
+    def update(self, album):
+        self._connection.execute(
+            'UPDATE albums SET title = %s, release_year = %s, artist_id = %s WHERE id = %s', [album.title, album.release_year, album.artist_id, album.id])
+        return None
