@@ -144,7 +144,7 @@ class BookRepository():
         # Returns None
 ```
 
-## 6. Write Test Examples
+## 6. Write Test Examples (Not Done - went straight to Test Driving)
 
 Write Python code that defines the expected behaviour of the Repository class, following your design from the table written in step 5.
 
