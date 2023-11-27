@@ -3,6 +3,7 @@ from psycopg.rows import dict_row
 import os
 import platform
 
+password = None
 # Password only required for Linux, comment out on Mac
 if platform.system() != "Darwin":
     import json
