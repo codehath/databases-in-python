@@ -1,5 +1,5 @@
 from lib.database_connection import DatabaseConnection
-from lib.book_repository import BookRepository
+from lib.recipe_repository import RecipeRepository
 
 
 # Connect to the database
@@ -7,12 +7,12 @@ connection = DatabaseConnection()
 connection.connect()
 
 # Seed with some seed data
-connection.seed("seeds/book_store.sql")
+connection.seed("seeds/recipes.sql")
 
-# Retrieve all books
-book_repository = BookRepository(connection)
-books = book_repository.all()
+# # Retrieve all recipes
+# recipe_repository = RecipeRepository(connection)
+# recipes = recipe_repository.all()
 
-# List them out
-for book in books:
-    print(book)
+# # List them out
+# for recipe in recipes:
+#     print(recipe)

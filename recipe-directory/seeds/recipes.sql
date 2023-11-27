@@ -8,7 +8,7 @@ DROP TABLE IF EXISTS recipes;
 DROP SEQUENCE IF EXISTS recipes_id_seq;
 
 -- Then, we recreate them
-CREATE SEQUENCE IF NOT EXISTS books_id_seq;
+CREATE SEQUENCE IF NOT EXISTS recipes_id_seq;
 CREATE TABLE recipes (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
@@ -17,8 +17,8 @@ CREATE TABLE recipes (
 );
 
 -- Finally, we add any records that are needed for the tests to run
-INSERT INTO books (title, author_name) VALUES ('Mac and Cheese', 90, 5);
-INSERT INTO books (title, author_name) VALUES ('Chicken Chow Mein', 45, 3);
-INSERT INTO books (title, author_name) VALUES ('Spaghetti Bolognese', 120, 4);
-INSERT INTO books (title, author_name) VALUES ('Thai Green Curry', 45, 3);
-INSERT INTO books (title, author_name) VALUES ('Egg Fried Rice', 30, 5);
+INSERT INTO recipes (title, author_name) VALUES ('Mac and Cheese', 90, 5);
+INSERT INTO recipes (title, author_name) VALUES ('Chicken Chow Mein', 45, 3);
+INSERT INTO recipes (title, author_name) VALUES ('Spaghetti Bolognese', 120, 4);
+INSERT INTO recipes (title, author_name) VALUES ('Thai Green Curry', 45, 3);
+INSERT INTO recipes (title, author_name) VALUES ('Egg Fried Rice', 30, 5);
