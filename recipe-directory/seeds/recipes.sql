@@ -17,8 +17,8 @@ CREATE TABLE recipes (
 );
 
 -- Finally, we add any records that are needed for the tests to run
-INSERT INTO recipes (title, author_name) VALUES ('Mac and Cheese', 90, 5);
-INSERT INTO recipes (title, author_name) VALUES ('Chicken Chow Mein', 45, 3);
-INSERT INTO recipes (title, author_name) VALUES ('Spaghetti Bolognese', 120, 4);
-INSERT INTO recipes (title, author_name) VALUES ('Thai Green Curry', 45, 3);
-INSERT INTO recipes (title, author_name) VALUES ('Egg Fried Rice', 30, 5);
+INSERT INTO recipes (name, cooking_time, rating) VALUES ('Mac and Cheese', 90, 5);
+INSERT INTO recipes (name, cooking_time, rating) VALUES ('Chicken Chow Mein', 45, 3);
+INSERT INTO recipes (name, cooking_time, rating) VALUES ('Spaghetti Bolognese', 120, 4);
+INSERT INTO recipes (name, cooking_time, rating) VALUES ('Thai Green Curry', 45, 3);
+INSERT INTO recipes (name, cooking_time, rating) VALUES ('Egg Fried Rice', 30, 5);

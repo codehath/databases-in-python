@@ -6,21 +6,21 @@ class RecipeRepository:
     def __init__(self, connection):
         self._connection = connection
 
-    # # Retrieve all recipes
-    # def all(self):
-    #     rows = self._connection.execute('SELECT * from recipes')
-    #     recipes = []
-    #     for row in rows:
-    #         item = Recipe(row["id"], row["title"], row["author_name"])
-    #         recipes.append(item)
-    #     return recipes
+    # Retrieve all recipes
+    def all(self):
+        rows = self._connection.execute('SELECT * from recipes')
+        recipes = []
+        for row in rows:
+            item = Recipe(row["id"], row["name"], row["cooking_time"], row["rating"])
+            recipes.append(item)
+        return recipes
 
-    # # Find a single recipe by their id
-    # def find(self, recipe_id):
-    #     rows = self._connection.execute(
-    #         'SELECT * from recipes WHERE id = %s', [recipe_id])
-    #     row = rows[0]
-    #     return Recipe(row["id"], row["name"], row["genre"])
+    # Find a single recipe by their id
+    def find(self, recipe_id):
+        rows = self._connection.execute(
+            'SELECT * from recipes WHERE id = %s', [recipe_id])
+        row = rows[0]
+        return Recipe(row["id"], row["name"], row["cooking_time"], row["rating"])
 
     # # Create a new recipe
     # # Do you want to get its id back? Look into RETURNING id;
