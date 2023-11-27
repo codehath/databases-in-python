@@ -48,8 +48,6 @@ Put the different nouns in this table. Replace the example with your own nouns.
 [Here's a full documentation of PostgreSQL data types](https://www.postgresql.org/docs/current/datatype.html).
 
 ```
-# EXAMPLE:
-
 Table: cohorts
 id: SERIAL
 cohort_name: text
@@ -57,14 +55,14 @@ starting_date: int
 
 Table: students
 id: SERIAL
-name: name
+name: text
 ```
 
 ## 4. Decide on The Tables Relationship
 
 ```
 1. Can one [cohort] have many [students]? **YES**
-2. Can one [student] have many [Tcohorts]? **NO**
+2. Can one [student] have many [cohorts]? **NO**
 
 -> Therefore,
 -> A cohort HAS MANY students
