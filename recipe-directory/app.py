@@ -9,10 +9,10 @@ connection.connect()
 # Seed with some seed data
 connection.seed("seeds/recipes.sql")
 
-# # Retrieve all recipes
-# recipe_repository = RecipeRepository(connection)
-# recipes = recipe_repository.all()
+# Retrieve all recipes
+recipe_repository = RecipeRepository(connection)
+recipes = recipe_repository.all()
 
-# # List them out
-# for recipe in recipes:
-#     print(recipe)
+# List them out
+for recipe in recipes:
+    print(recipe)
