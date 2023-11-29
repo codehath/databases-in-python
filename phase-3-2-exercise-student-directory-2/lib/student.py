@@ -8,4 +8,4 @@ class Student:
         return self.__dict__ == other.__dict__
     
     def __repr__(self):
-        return f"Student(id={self.id}, name={self.name}, cohort_id={self.cohort_id})"
+        return f"Student({self.id}, {self.name}, Cohort ID = {self.cohort_id})"

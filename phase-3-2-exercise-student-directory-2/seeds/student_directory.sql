@@ -26,7 +26,7 @@ CREATE TABLE students (
 
 
 -- Insert data into the cohorts table
-INSERT INTO cohorts (cohort_name, starting_date) VALUES
+INSERT INTO cohorts (name, starting_date) VALUES
 ('Cohort A', '2022-01-01'),
 ('Cohort B', '2022-02-01'),
 ('Cohort C', '2022-03-01');
